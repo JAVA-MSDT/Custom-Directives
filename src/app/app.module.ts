@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { StyleParentDirective } from './directive/style-parent.directive';
+import { TriggerPressDirective } from './directive/trigger-press.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, StyleParentDirective ],
+  declarations: [ AppComponent, HelloComponent, StyleParentDirective, TriggerPressDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

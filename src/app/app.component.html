@@ -18,7 +18,7 @@
 <br>
 <hr>
 <div class="pressable-container">
-  <a (click)="toggleDisplay()">Display Or Hide</a>
+  <a tabindex="0" TriggerPressDirective (click)="toggleDisplay()">Display Or Hide</a>
   <p *ngIf="displayText">Displied or hide on click</p>
   
 </div>
