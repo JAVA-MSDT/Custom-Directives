@@ -1,18 +1,20 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 import { KEY_BUTTON } from '../util/buttons';
 
 @Directive({
-  selector: '[appTriggerPress]',
+  selector: '[triggerPress]',
 })
 export class TriggerPressDirective {
-  eventFired: KeyboardEvent;
+  @Input('targetedElement') targetedElement: HTMLElement;
   constructor(private el: ElementRef) {
-    this.eventFired = this.el.nativeElement.event;
-    console.log(el.nativeElement)
   }
 
-  @HostListener('keydown') triggerPress() {
-    console.log(this.eventFired);
+  @HostListener('keydown', ['$event']) triggerPress(event: KeyboardEvent) {
+    if(this.targetedElement) {
+      this.buttonPressHandler(event, this.targetedElement);
+    } else {
+      this.buttonPressHandler(event, this.el.nativeElement);
+    }
   }
 
   buttonPressHandler(event: KeyboardEvent, element: HTMLElement): void {
