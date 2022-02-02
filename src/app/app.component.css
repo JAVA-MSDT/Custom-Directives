@@ -39,3 +39,17 @@ p {
 .displayOnFocus{
   opacity: 1;
 }
+
+.pressable-container{
+  background-color: antiquewhite;
+  padding: 20px;
+  border: 2px solid burlywood;
+}
+
+.span-container{
+  background-color: rgb(179, 176, 10);
+  padding: 20px;
+  border: 2px solid rgba(87, 53, 9, 0.959);
+}
+
+

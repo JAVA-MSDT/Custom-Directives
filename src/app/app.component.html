@@ -18,9 +18,16 @@
 <br>
 <hr>
 <div class="pressable-container">
-  <button  triggerPress [targetedElement]="toggleDisplayAnchor">Trigger below ancohr </button>
+  <button  triggerPress [targetedElement]="toggleDisplayAnchor">Focuss & press Trigger below ancohr </button>
   <br> <br>
-  <a #toggleDisplayAnchor tabindex="0" triggerPress (click)="toggleDisplay()">Display Or Hide</a>
+  <a #toggleDisplayAnchor tabindex="0" triggerPress (click)="toggleDisplay()">Click to Display Or Hide</a>
   <p *ngIf="displayText">Displied or hide on click</p>
-  
+</div>
+<br>
+<hr>
+<div class="span-container">
+  <span tabindex="0" triggerPress [targetedElement]="toggleMe">Focus & press Trigger below SPAN </span>
+  <br> <br>
+  <span #toggleMe tabindex="0" triggerPress (click)="toggleDisplaySpan()">Click to Display Or Hide SPAN</span>
+  <p *ngIf="displaySpan">Displied or hide This SPAN on click</p>
 </div>
