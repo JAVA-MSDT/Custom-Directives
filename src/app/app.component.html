@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<div class="parent">
+  <div #ChildOne class="child">
+    <div  class="childOne">
+      <button
+        class="btn-child"
+        styleParent
+        className="displayOnFocus"
+        [parentReference]="ChildOne"
+      >
+        Focusable
+      </button>
+    </div>
+  </div>
+</div>

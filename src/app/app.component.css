@@ -1,0 +1,41 @@
+p {
+  font-family: Lato;
+}
+
+.parent {
+  padding: 20px;
+  border: 1px solid black;
+  width: 250px;
+  margin: 0 auto;
+  background-color: aqua;
+}
+
+.parent:hover .child {
+  opacity: 1;
+}
+
+.child {
+  border: 1px solid black;
+  width: 250px;
+  margin: 0 auto;
+  background-color: bisque;
+  transition: 0.55s opacity, 0.55s visibility;
+  opacity: 0;
+  
+}
+
+.btn-child {
+  padding: 10px;
+}
+
+.childOneFocusLose {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 40px;
+ opacity: 1;
+}
+.displayOnFocus{
+  opacity: 1;
+}
